@@ -1,0 +1,56 @@
+#navbar {
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    border-right: 3.1px solid #a09d9d; 
+    width: 292px;
+    left: 0;
+  }
+  
+  #main-doc {
+    position: absolute;
+    left: 337px;
+  }
+  
+  header {
+    font-size: 1.8em;
+    font-weight: thin;
+  }
+  
+  body {
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+  
+  #navbar > header {
+    text-align: center;
+  }
+  
+  a {
+    color: #504e4e;
+    text-decoration: none;
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+    border-top: 1px solid black;
+  }
+  
+  #navbar > ul {
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  pre {
+    background: rgb(245, 245, 245);
+    width: 1135px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+  
+  @media (max-width: 100px) {
+    #navbar {
+      position: absolute;
+    }
+  }

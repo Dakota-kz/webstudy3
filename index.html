@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Site created for fun! -->
+    <title>JS Documentation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>JS Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Why_JavaScript?">Why JavaScript?</a></li>
+        <li><a class="nav-link" href="#Basic_Concepts">Basic Concepts</a></li>
+        <li><a class="nav-link" href="#Advanced_Topics">Advanced Topics</a></li>
+        <li><a class="nav-link" href="#Getting_Started">Getting Started</a></li>
+        <li><a class="nav-link" href="#Syntax_and_Fundamentals">Syntax and Fundamentals</a></li>
+        <li><a class="nav-link" href="#JavaScript_Modules">JavaScript Modules</a></li>
+        <li><a class="nav-link" href="#JavaScript_Frameworks_and_Libraries">JavaScript Frameworks and Libraries</a></li>
+        <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>JavaScript is a versatile, high-level programming language that is widely used in web development. Initially developed to add interactive elements to web pages, JavaScript has evolved into a powerful tool that enables developers to build complex applications, both on the client side (in the browser) and the server side (using environments like Node.js).</p>
+        </section>
+      <section class="main-section" id="Why_JavaScript?">
+        <header>Why JavaScript?</header>
+        <p>JavaScript is the cornerstone of modern web development. It is the language that brings web pages to life by allowing you to create dynamic content, control multimedia, animate images, and much more. Here are a few reasons why JavaScript is essential:</p>
+<ul>
+  <li>Ubiquity: JavaScript is supported by all modern web browsers, making it the de facto language for building interactive web applications.</li>
+  <li>Versatility: Beyond web browsers, JavaScript can be used in server-side programming, mobile app development, game development, and even in desktop applications.</li>
+  <li>Vast Ecosystem: With a thriving community, JavaScript has a rich ecosystem of libraries and frameworks like React, Angular, and Vue, which simplify and enhance development.</li>
+  <li>Interoperability: JavaScript can work seamlessly with other technologies such as HTML and CSS to create robust web applications.</li>
+</ul>
+</section>
+      <section class="main-section" id="Basic_Concepts">
+        <header>Basic Concepts</header>
+      <p>Before diving into more complex aspects of JavaScript, it's essential to understand a few basic concepts:</p>
+      <ul>
+        <li>Variables: Containers for storing data values. JavaScript supports different types of variables, such as let, const, and var.</li>
+        <li>Functions: Reusable blocks of code that perform specific tasks. Functions can be defined using the function keyword or as arrow functions (=>).</li>
+        <li>Events: JavaScript can listen to user interactions (like clicks or key presses) and respond accordingly.</li>
+        <li>Objects: Collections of related data and functions (called methods). Almost everything in JavaScript is an object.</li>
+      </ul>
+      <pre><code>
+let name = "Alice";
+const age = 30;
+
+const person = {
+    firstName: name,
+    age: age,
+    greet: function() {
+        return `Привет, меня зовут ${this.firstName} и мне ${this.age} лет.`;
+    }
+};
+
+function updateGreeting(newName) {
+    person.firstName = newName;
+    console.log(person.greet());
+}
+
+updateGreeting("Bob");
+    </code></pre>
+      </section>
+      <section class="main-section" id="Advanced_Topics">
+        <header>Advanced Topics</header>
+        <p>As you become more familiar with JavaScript, you'll encounter more advanced topics that allow for more sophisticated programming:</p>
+        <ul>
+          <li>Asynchronous Programming: JavaScript supports asynchronous operations through callbacks, Promises, and async/await syntax, allowing for non-blocking code execution.</li>
+          <li>Modules: JavaScript modules allow you to organize your code into reusable components, making your codebase more maintainable and scalable.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Getting_Started">
+        <header>Getting Started</header>
+        <p>To get started with JavaScript, you only need a web browser and a text editor. You can write JavaScript directly in your HTML files using the <code>script</code> tag or in separate.js files that are then linked to your HTML.</p>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First JavaScript Program&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;script&gt;
+        console.log("Hello, World!");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+    <p>This simple example logs "Hello, World!" to the browser's console, demonstrating the basic structure of an HTML document with embedded JavaScript.</p>
+      </section>
+      <section class="main-section" id="Syntax_and_Fundamentals">
+        <header>Syntax and Fundamentals</header>
+        <p>Understand the fundamental syntax of JavaScript, including variables, data types, operators, and control structures. This topic covers the essential building blocks of JavaScript programming.</p>
+        <pre><code>
+          let message = "Hello, World!";
+const year = 2024;
+
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 25,
+    fullName: function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+};
+
+const numbers = [1, 2, 3, 4, 5];
+
+if (year > 2000) {
+    console.log("The year is in the 21st century.");
+} else {
+    console.log("The year is in the 20th century.");
+}
+
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+console.log(greet("Alice"));
+console.log(person.fullName());
+        </code></pre>
+      </section>
+      <section class="main-section" id="JavaScript_Modules">
+        <header>JavaScript Modules</header>
+        <p>Modules allow you to organize and reuse code across different parts of your application. This section will introduce you to the concept of modules, how to export and import them, and their role in modern JavaScript development.</p>
+        <pre><code>
+          export function add(a, b) {
+    return a + b;
+}
+
+export function subtract(a, b) {
+    return a - b;
+}
+
+export const PI = 3.14159;
+
+        </code></pre>
+      </section>
+      <section class="main-section" id="JavaScript_Frameworks_and_Libraries">
+        <header>JavaScript Frameworks and Libraries</header>
+        <p>While plain JavaScript is powerful, using frameworks and libraries can significantly speed up development. This section provides an overview of popular JavaScript frameworks and libraries like React, Angular, and Vue.js, and when to use them.</p>
+        <pre><code>
+            import React from 'react';
+import ReactDOM from 'react-dom';
+
+function App() {
+    return (
+        &ltdiv&gt
+            &lth1&gtHello, React!&lt/h1&gt
+            &ltp>This is a simple React component.&lt/p&gt
+        &lt/div&gt
+    );
+}
+ReactDOM.render(<App />, document.getElementById('root'));
+          </code></pre>
+      </section>
+      <section class="main-section" id="Conclusion">
+        <header>Conclusion</header>
+        <p>JavaScript is a fundamental skill for anyone looking to build modern web applications. Whether you're creating a simple interactive element or a complex web application, JavaScript provides the tools necessary to bring your ideas to life. As you continue with this documentation, you'll explore more advanced concepts, techniques, and best practices that will help you become proficient in JavaScript.</p>
+      </section>
+    </main>
+  </body>
+</html>
